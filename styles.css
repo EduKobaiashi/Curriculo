@@ -1,0 +1,105 @@
+* {
+    margin: 3%;
+    margin-top: 1%;
+}
+
+hr {
+    margin: 3%;
+}
+
+h1 {
+    font-size: 60px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+.navegacao {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+.navegacao li {
+    margin: 10px;
+    font-size: 40px;
+}
+
+ul a {
+    text-decoration: none;
+    color: black;
+}
+
+.hover a:hover{
+    background-color: black;
+    color: white;
+}
+
+.formacao_academica {
+    display: grid;
+    grid-template-columns: 1.5fr 0.5fr 1fr 1fr;
+    grid-template-rows: 0.4fr 1.3fr 1.3fr;
+    grid-template-areas: "titulofa . . ." "txtenmd txtenmd imgenmd imgenmd" "txtfacul txtfacul imgfacul imgfacul";
+}
+  
+.titulofa { 
+    grid-area: titulofa; 
+}
+
+.txtenmd { 
+    grid-area: txtenmd;
+    align-self: center;
+}
+  
+.imgenmd { 
+    grid-area: imgenmd;
+    justify-self: center;
+}
+  
+.txtfacul { 
+    grid-area: txtfacul; 
+    align-self: center;
+}
+  
+.imgfacul { 
+    grid-area: imgfacul;
+    justify-self: center;
+}
+
+.expython {
+    width: 10%;
+}
+
+/*
+.w3-round-small{border-radius:2px}
+.w3-round,
+.w3-round-medium{border-radius:4px}
+.w3-round-large{border-radius:8px}
+.w3-round-xlarge{border-radius:16px}
+.w3-round-xxlarge{border-radius:32px}
+
+.w3-container,
+.w3-panel{padding:0.01em 16px}
+.w3-panel{margin-top:16px;margin-bottom:16px}
+
+#progressbar {
+  background-color: black;
+  border-radius: 13px;
+  /* (height of inner div) / 2 + padding
+  padding: 3px;
+}
+
+#progressbar>div {
+  background-color: orange;
+  width: 40%;
+  /* Adjust with JavaScript
+  height: 20px;
+  border-radius: 10px;
+}
+
+https://codepen.io/peruvianidol/pen/NLMvqO
+
+
+*/

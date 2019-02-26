@@ -1,0 +1,16 @@
+home {
+    sobre o projeto do curriculo
+    sobre o laboratorio fabrica de software
+    sobre o trabalho em equipe no laboratorio
+}
+
+objetivo {
+    especializar em segurança da informação
+    objetivo do projeto e da fabrica
+    objetivo de emprego
+}
+
+experiencia {
+    habilidade em linguagens de programação
+    habilidade no inglês
+}
