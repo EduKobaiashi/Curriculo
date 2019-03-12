@@ -16,5 +16,105 @@
             </ul>
         </nav>
         <hr>
+        <button class="colapsavel" id="colapsavel"><strong>Formação Profissional</strong></button>
+        <div class="conteudo">
+            <p>Pretendo me formar e especializar em Segurança da Informação</p>
+        </div>
+
+        <button class="colapsavel" id="colapsavel"><strong>Projeto Laboratório Fábrica de Software</strong></button>
+        <div class="conteudo">
+            <p>
+                Através deste laboratório, procuro expandir a minha área de conhecimento sobre computação 
+                para alem da grade curricular comum da faculdade, para assim, possuir mais proficiencia em 
+                diferentes áreas, aumentando as áreas de atuação. Assim como ter uma noção básica e inicial 
+                de como seria trabalhar em um ambiente de trabalho em grupo, com projetos e etc
+            </p>
+        </div>
+
+        <button class="colapsavel" id="colapsavel"><strong>Emprego</strong></button>
+        <div class="conteudo">
+            <p>
+                Meu objetivo como emprego é começar como um Analista de Segurança Junior 
+                na empresa e colaborar na área da segurança para que os dados importantes 
+                e confidencias da empresa se mantenham seguros
+            </p>
+        </div>
+
+        <button class="colapsavel" id="colapsavel"><strong>Links Sobre Segurança da Informação</strong></button>
+        <div class="conteudo">
+            <p>link1</p>
+            <p>link2</p>
+            <p>link3</p>
+        </div>
+
+        <script>
+            var acc = document.getElementsByClassName("colapsavel");
+		    var i;
+
+			for (i = 0; i < acc.length; i++) {
+                acc[i].onclick = function() {
+                var ativo = document.getElementsByClassName('ativo');
+                if (ativo.length && ativo[0] !== this) {
+                    ativo[0].classList.remove('ativo');
+                }
+				this.classList.toggle("ativo");
+  	            }
+	        }
+        </script>
+
+        <!-- <script>
+            var coll = document.getElementsByClassName("colapsavel");
+            var i;
+            for (i = 0; i < coll.length; i++){
+                coll[i].addEventListener("click", function() {
+                    
+                }) 
+            }
+        </script> -->
+
+        <!--
+        <script>
+            var coll = document.getElementsByClassName("colapsavel");
+            var i;
+            for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("ativo");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                content.style.maxHeight = null;
+                } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                }
+                var iativo = document.querySelectorAll(".ativo")
+                if (iativo.length > 1) {
+                    document.getElementById("colapsavel").classList.remove('ativo');
+                }   
+                });
+            }
+        </script>
+        -->
+
+        <!--
+            se click
+            se tem algum aberto
+            if true > fecha
+            if false > pula
+            
+            abre o item q foi chamado
+        -->
+
+        <!-- ABRE SEM ANIMAÇÃO
+        <div class="colapsavel">
+            <input type="checkbox" id="colapsavel" class="clique">
+            <label for="colapsavel" class="lbl-clique">Especialização Profissional</label>
+            <div class="conteudo_colapsavel">
+                <div class="conteudo_dentro">
+                    <p>
+                        Eu pretendo me especializar com Segurança da Informação
+                    </p>
+                </div>
+            </div>
+        </div>
+        -->
     </body>
 </html>

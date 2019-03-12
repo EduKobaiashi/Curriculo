@@ -1,4 +1,12 @@
-* {
+/*Geral*/
+
+*{
+    margin-left: 3%;
+    margin-right: 3%;
+    font-family: Verdana;
+}
+
+.navegacao {
     margin: 3%;
     margin-top: 1%;
 }
@@ -15,6 +23,14 @@ h1 {
 h2 {
     font-size: 40px;
 }
+
+h3 {
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+/*Barra de Navegação*/
 
 .navegacao {
     display: flex;
@@ -37,20 +53,27 @@ ul a {
     color: white;
 }
 
+/*Formação - Grid*/
+
 .formacao_academica {
     display: grid;
     grid-template-columns: 1.5fr 0.5fr 1fr 1fr;
     grid-template-rows: 0.4fr 1.3fr 1.3fr;
-    grid-template-areas: "titulofa . . ." "txtenmd txtenmd imgenmd imgenmd" "txtfacul txtfacul imgfacul imgfacul";
+    grid-template-areas: "titulofa titulofa . ." "txtenmd txtenmd imgenmd imgenmd" "txtfacul txtfacul imgfacul imgfacul";
 }
   
 .titulofa { 
     grid-area: titulofa; 
 }
 
+.titulofa h2 {
+    font-size: 40px;
+}
+
 .txtenmd { 
     grid-area: txtenmd;
     align-self: center;
+    font-size: 25px;
 }
   
 .imgenmd { 
@@ -61,6 +84,7 @@ ul a {
 .txtfacul { 
     grid-area: txtfacul; 
     align-self: center;
+    font-size: 25px;
 }
   
 .imgfacul { 
@@ -68,21 +92,225 @@ ul a {
     justify-self: center;
 }
 
-.expython {
-    width: 10%;
+.tituloex {
+    margin-bottom: 65px;
 }
 
-/*
-.w3-round-small{border-radius:2px}
-.w3-round,
-.w3-round-medium{border-radius:4px}
-.w3-round-large{border-radius:8px}
-.w3-round-xlarge{border-radius:16px}
-.w3-round-xxlarge{border-radius:32px}
+/*Experiencia - Barra de Progesso*/
 
-.w3-container,
-.w3-panel{padding:0.01em 16px}
-.w3-panel{margin-top:16px;margin-bottom:16px}
+progress[value] {
+    -webkit-appearance: none;
+    width: 40%;
+    margin-bottom: 2%;
+    margin-top: 1%;
+}
+
+progress[value]::-webkit-progress-bar {
+    background-color: #eee;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress[value]::-webkit-progress-value {
+    background: rgba(140, 20, 252, 1);
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgb(0, 0, 0) inset;
+}
+
+/*Objetivo - Colapsavel*/
+
+button.colapsavel {
+    background-color: #f6f6f6;
+    color: #a3a2a2;
+    cursor: pointer;
+    padding: 18px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 35px;
+    transition: 0.4s;
+    
+    width: 90%;
+    padding-left: 50px;
+    font-family: roboto;
+    font-weight: bold;
+}
+
+button.colapsavel.active, button.colapsavel:hover {
+    background-color: #f0eeee;
+    color: #444444;
+}
+
+button.colapsavel:after {
+    content: '\002B';
+    color: #575757;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+    padding-right: 32px;
+}
+
+button.colapsavel.active:after {
+    content: "\2212";
+    color: #444444;
+}
+
+div.conteudo {
+    padding-left: 8%;
+    background-color: #f0eeee;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    width: 82%;
+    font-size: 20px;
+}
+
+.conteudo p{
+	width: 80%;
+	padding-bottom: 20px;
+	font-family: roboto;
+	font-size: 20px;
+	font-weight: normal;
+	color: a3a2a2;
+}
+
+.conteudo {
+    max-height: 0;
+    transition: max-height .25s ease;
+  }
+  
+.ativo + .conteudo {
+    max-height: 250px;
+    transition: max-height .25s ease;
+}
+  
+button.colapsavel.active:after,
+button.colapsavel:hover:after {
+    color: red;
+}
+
+
+/*
+.colapsavel {
+    background-color: rgb(255, 137, 27);
+    color: #000000;
+    cursor: pointer;
+    padding: 18px;
+    width: 60%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 23px;
+}
+
+.ativo, .colapsavel:hover {
+    background-color: rgb(199, 106, 19);
+}
+
+.conteudo {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: rgba(255, 147, 45, 0.616);
+    width: 60%;
+}
+*/
+
+/*
+input[type='checkbox'] {
+    display: none;
+}
+
+.lbl-clique {
+    display: block;
+  
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-align: center;
+  
+    padding: 1rem;
+  
+    color: rgb(79, 14, 139);
+    background: rgba(140, 20, 252, 1);
+  
+    cursor: pointer;
+  
+    border-radius: 7px;
+    transition: all 0.25s ease-out;
+}
+  
+.lbl-clique:hover {
+    color: rgb(36, 6, 65);
+}
+
+.lbl-clique::before {
+    content: ' ';
+    display: inline-block;
+  
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid currentColor;
+  
+    vertical-align: middle;
+    margin-right: .7rem;
+    transform: translateY(-2px);
+  
+    transition: transform .2s ease-out;
+}
+
+.conteudo_colapsavel .conteudo_dentro {
+    background: rgba(140, 20, 252, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.45);
+  
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    padding: .5rem 1rem;
+}
+
+.conteudo_colapsavel {
+    max-height: 0px;
+    overflow: hidden;
+  
+    transition: max-height .25s ease-in-out;
+}
+
+.clique:checked + .lbl-clique + .conteudo_colapsavel {
+    max-height: 350px;
+}
+
+.clique:checked + .lbl-clique::before {
+    transform: rotate(90deg) translateX(-3px);
+}
+  
+.clique:checked + .lbl-clique {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.lbl-clique , .conteudo_dentro {
+    margin: 0px;
+}
+
+*/
+
+/*progress[value]::-webkit-progress-bar {
+    background-image:
+	   -webkit-linear-gradient(-45deg, 
+	                           transparent 33%, rgba(0, 0, 0, .1) 33%, 
+	                           rgba(0,0, 0, .1) 66%, transparent 66%),
+	   -webkit-linear-gradient(top, 
+	                           rgba(255, 255, 255, .25), 
+	                           rgba(0, 0, 0, .25)),
+	   -webkit-linear-gradient(left, #09c, #f44);
+
+    border-radius: 2px; 
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+}
+*/
+
+/*
 
 #progressbar {
   background-color: black;
